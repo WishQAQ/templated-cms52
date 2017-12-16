@@ -1,0 +1,1 @@
+<a data-slide-index="0" href="[field:imgsrc/]"><img src="[field:imgsrc/]" /></a>

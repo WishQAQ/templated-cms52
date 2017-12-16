@@ -1,0 +1,31 @@
+﻿<div class="col-xs-12 col-sm-4 col-md-3">
+        <div class="left_nav">
+          <p class="left_p">CATEGORIES</p>
+          <h1 class="left_h1">分类导航</h1>
+          <ul class="left_nav_ul">
+            
+			{dede:channel row="10" type="son" col="1" currentstyle="<li><a class='cur' href='~typelink~' ~rel~>~typename~</a></li>" }
+            <li><a class='curret' href="[field:typeurl/]">[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+        </div>
+        <div class="left_news">
+          <p class="left_p left_news_p">LATEST NEWS</p>
+          <h1 class="left_h1">新闻中心</h1>
+          <ul class="index_news">
+            {dede:arclist typeid=7 row=6 titlelen=40 orderby='pubdate' }
+            <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a><span class='news_time'>[field:pubdate
+                function="MyDate('Y-m-d',@me)"/]</span></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="tel"><span>咨询热线</span>
+          <p>{dede:global.cfg_rexian/}</p>
+        </div>
+        <div class="index_contact">
+          <p>联系人：张先生</p>
+          <p>电话：13500000000</p>
+          <p>邮 箱：admin@dedecms.com</p>
+          <p>地 址：广州市天河区迎龙路161号</p>
+        </div>
+      </div>

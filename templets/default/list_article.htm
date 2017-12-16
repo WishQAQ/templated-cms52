@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/skin/css/bootstrap.css" rel="stylesheet">
+<link href="/skin/style/css/bxslider.css" rel="stylesheet">
+<link href="/skin/style/css/style.css" rel="stylesheet">
+<script src="/skin/js/jquery.min.js"></script>
+<script src="/skin/style/js/bxslider.min.js"></script>
+<script src="/skin/style/js/common.js"></script>
+<script src="/skin/js/bootstrap.js"></script>
+<!--[if lt IE 9]><script src="../../cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="../../cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<!-- main -->
+<div class="main">
+  <div class="container">
+    <div class="row">
+      <!-- right -->
+      <div class="col-xs-12 col-sm-8 col-md-9" style="float:right">
+        <div class="row">
+          <div class="cat_title"><span>新闻中心</span><small>当前位置：{dede:field name='position'/}</small></div>
+          <ul class="list_news">
+            
+			{dede:list pagesize="15" titlelen="80"}
+			<li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a><span class="news_time">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
+			{/dede:list}
+			
+          </ul>
+          <div class="page">{dede:pagelist listitem="index,info,next,pageno" listsize="5"/}</div>
+        </div>
+      </div>
+      <!-- end right-->
+      <!-- left -->
+      {dede:include filename="left.htm"/}
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+<script type="text/javascript" src="/skin/js/online.js"></script>
+</body>
+</html>

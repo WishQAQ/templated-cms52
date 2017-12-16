@@ -1,0 +1,43 @@
+﻿<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">导航菜单</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a href="/"><img src="/skin/images/logo.png" class="logo" alt=""/></a></div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">网站首页</a></li>
+		  
+		  {dede:channelartlist typeid='top' row='8'} 
+		  <li class="dropdown"><a href="{dede:field name='typeurl'/}">{dede:field name='typename' /}</a>
+		  <a href="{dede:field name='typeurl'/}" id="app_menudown" style="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-down btn-xs"></span></a>
+            <ul class="dropdown-menu nav_small" role="menu">
+              {dede:channel type='son' noself='yes'}
+			  <li><a href="[field:typelink/]">[field:typename/]</a></li>
+              {/dede:channel} 
+            </ul>
+          </li>
+		  {/dede:channelartlist}
+		  
+		 
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+  <!-- bxslider -->
+  <div class="flash">
+    <ul class="bxslider">
+      <li><a href="1"><img src="/skin/images/banner/1.jpg" /></a></li>
+      <li><a href="1"><img src="/skin/images/banner/2.jpg" /></a></li>
+    </ul>
+  </div>
+  <script type="text/javascript">        $('.bxslider').bxSlider({
+          adaptiveHeight: true,
+          infiniteLoop: false,
+          hideControlOnEnd: true,
+          auto:true
+        });
+    </script>
+</header>
